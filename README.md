@@ -1,3 +1,14 @@
+# AI-Coding-Challenge-flashcards-app
+
+## Reflection
+- **Where AI saved time:** AI significantly accelerated the initial setup by rapidly generating the boilerplate for state management (using `useState` and `useEffect`), the semantic HTML structure of the application shell, and the CSS grid layout, saving hours of manual setup.
+- **AI bug identified and fixed:** The AI generated the UI for the "Previous", "Next", and "Shuffle" buttons but failed to wire them up to any `onClick` event handlers. I fixed this by implementing `handleNextCard`, `handlePrevCard`, and `handleShuffle` state transition logic and binding them directly to the buttons to restore full functionality.
+- **Code refactored for clarity:** I refactored the standard text buttons (`Study`, `Rename`, `Delete`, `Edit card`, `Previous`, `Next`) in the UI into sleek, accessible SVG icons. This cleared up visual clutter in the interface and made the application look much cleaner and more modern.
+- **Accessibility improvement added:** When I replaced the text buttons with SVG icons, I explicitly added `aria-label` attributes (e.g., `aria-label="Edit card"`) to ensure the controls remain fully accessible to screen readers despite having no visible text.
+- **Prompt changes that improved AI output:** Providing highly specific instructions (like providing the exact SVG code and line numbers to replace) rather than vague requests (like "make the buttons look better") yielded much more accurate, predictable, and usable code modifications without unintended side effects.
+
+```
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -75,12 +86,4 @@ export default defineConfig([
   },
 ])
 
-```
-# AI-Coding-Challenge-flashcards-app
 
-## Reflection
-- **Where AI saved time:** AI significantly accelerated the initial setup by rapidly generating the boilerplate for state management (using `useState` and `useEffect`), the semantic HTML structure of the application shell, and the CSS grid layout, saving hours of manual setup.
-- **AI bug identified and fixed:** The AI generated the UI for the "Previous", "Next", and "Shuffle" buttons but failed to wire them up to any `onClick` event handlers. I fixed this by implementing `handleNextCard`, `handlePrevCard`, and `handleShuffle` state transition logic and binding them directly to the buttons to restore full functionality.
-- **Code refactored for clarity:** I refactored the standard text buttons (`Study`, `Rename`, `Delete`, `Edit card`, `Previous`, `Next`) in the UI into sleek, accessible SVG icons. This cleared up visual clutter in the interface and made the application look much cleaner and more modern.
-- **Accessibility improvement added:** When I replaced the text buttons with SVG icons, I explicitly added `aria-label` attributes (e.g., `aria-label="Edit card"`) to ensure the controls remain fully accessible to screen readers despite having no visible text.
-- **Prompt changes that improved AI output:** Providing highly specific instructions (like providing the exact SVG code and line numbers to replace) rather than vague requests (like "make the buttons look better") yielded much more accurate, predictable, and usable code modifications without unintended side effects.
